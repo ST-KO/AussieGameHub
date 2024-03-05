@@ -5,8 +5,8 @@ const headCoach = document.getElementById("head-coach");
 const playerCards = document.getElementById("player-cards");
 const playersDropdownList = document.getElementById("players");
 const myFavoriteFootballTeam = {
-  team: "Argentina",
-  sport: "Football",
+  team: "Australia",
+  sport: "Game Development",
   year: 1986,
   isWorldCupWinner: true,
   headCoach: {
@@ -15,74 +15,94 @@ const myFavoriteFootballTeam = {
   },
   players: [
     {
-      name: "Sergio Almirón",
-      position: "forward",
-      number: 1,
-      isCaptain: false,
-      nickname: null,
+      name: "Chaos Theory",
+      location: "Sydney",
+      gameengine: "Unity",
+      language: "C#",
+      isRemote: true,
+      remote: "Hybrid",
+      website: "https://www.chaostheorygames.com/"
     },
     {
-      name: "Sergio Batista",
-      position: "midfielder",
-      number: 2,
-      isCaptain: false,
-      nickname: null,
-    },
-     {
-      name: "Ricardo Bochini",
-      position: "midfielder",
-      number: 3,
-      isCaptain: false,
-      nickname: "El Bocha",
+      name: "Riot Games Sydney",
+      location: "Sydney",
+      gameengine: "Unreal",
+      languange: "C++",
+      isRemote: false,
+      remote: null,
+      website: "https://www.chaostheorygames.com/"
     },
     {
-      name: "Claudio Borghi",
-      position: "midfielder",
-      number: 4,
-      isCaptain: false,
-      nickname: "Bichi",
+      name: "Mode Games",
+      location: "Sydney",
+      gameengine: "Unity",
+      languange: "C#",
+      isRemote: false,
+      remote: null,
+      website: "https://www.mode-games.com/"
     },
     {
-      name: "José Luis Brown",
-      position: "defender",
-      number: 5,
-      isCaptain: false,
-      nickname: "Tata",
+      name: "Blowfish Studios",
+      location: "Sydney",
+      gameengine: "Unity, Unreal, Phaser",
+      languange: "C#, C++, JavaScript",
+      isRemote: true,
+      remote: "Hybrid",
+      website: "https://www.blowfishstudios.com/"
     },
     {
-      name: "Daniel Passarella",
-      position: "defender",
-      number: 6,
-      isCaptain: false,
-      nickname: "El Gran Capitán",
+      name: "Noble Steed Games",
+      location: "Sydney",
+      gameengine: "Unity",
+      languange: "C#",
+      isRemote: true,
+      remote: "Flexible",
+      website: "https://noblesteedgames.com/"
     },
     {
-      name: "Jorge Burruchaga",
-      position: "forward",
-      number: 7,
-      isCaptain: false,
-      nickname: "Burru",
+      name: "SMG Studio",
+      location: "Sydney",
+      gameengine: "Unity",
+      languange: "C#",
+      isRemote: true,
+      remote: "Flexible",
+      website: "https://www.smgstudio.com/"
     },
     {
-      name: "Néstor Clausen",
-      position: "defender",
-      number: 8,
-      isCaptain: false,
-      nickname: null,
+      name: "Not Doppler",
+      location: "Sydney",
+      gameengine: "Unity",
+      languange: "C#",
+      isRemote: true,
+      remote: "Hybrid",
+      website: "https://www.notdoppler.com/"
     },
     {
-      name: "José Luis Cuciuffo",
-      position: "defender",
-      number: 9,
-      isCaptain: false,
-      nickname: "El Cuchu",
+      name: "UBISOFT",
+      location: "Sydney",
+      gameengine: "Custom Engine",
+      languange: "C++",
+      isRemote: true,
+      remote: "Hybrid",
+      website: "https://www.ubisoft.com/en-us/"
     },
     {
-      name: "Diego Maradona",
-      position: "midfielder",
-      number: 10,
-      isCaptain: true,
-      nickname: "El Pibe de Oro",
+      name: "3RD SENSE",
+      location: "Sydney",
+      gameengine: "Unity",
+      languange: "C#",
+      isRemote: false,
+      remote: null,
+      website: "https://3rdsense.com/"
+    },
+    {
+      name: "High Limit Studio",
+      location: "Sydney",
+      gameengine: "Maybe Unity & Phaser",
+      languange: "C#, JavaScript",
+      isRemote: false,
+      remote: null,
+      website: "https://highlimitstudio.com/"
     },
     {
       name: "Jorge Valdano",
@@ -178,18 +198,20 @@ const { coachName } = myFavoriteFootballTeam.headCoach;
 typeOfSport.textContent = sport;
 teamName.textContent = team;
 worldCupYear.textContent = year;
-headCoach.textContent = coachName;
+// headCoach.textContent = coachName;
 
 const setPlayerCards = (arr = players) => {
   playerCards.innerHTML += arr
     .map(
-      ({ name, position, number, isCaptain, nickname }) =>
+      ({ name, position, number, isCaptain, nickname, location, gameengine,language,isRemote, remote, website }) =>
         `
         <div class="player-card">
-          <h2>${name} ${isCaptain ? "(Captain)" : ""}</h2>
-          <p>Position: ${position}</p>
-          <p>Number: ${number}</p>
-          <p>Nickname: ${nickname !== null ? nickname : "N/A"}</p>
+          <h2>${name} <br/>${isRemote ? "(Remote)" : ""}</h2>
+          <p>Location: ${location}</p>
+          <p>Game Engine: ${gameengine}</p>
+          <p>Language: ${language}</p>
+          <p>Remote: ${remote !== null ? remote : "N/A"}</p>
+          <p><a hreft="${website}"></a></p>
         </div>
       `
     )
@@ -200,25 +222,25 @@ playersDropdownList.addEventListener("change", (e) => {
   playerCards.innerHTML = "";
 
   switch (e.target.value) {
-    case "nickname":
-      setPlayerCards(players.filter((player) => player.nickname !== null));
+    case "Remote":
+      setPlayerCards(players.filter((player) => player.remote !== null));
       break;
-    case "forward":
-      setPlayerCards(players.filter((player) => player.position === "forward"));
+    case "Sydney":
+      setPlayerCards(players.filter((player) => player.location === "Sydney"));
       break;
-    case "midfielder":
+    case "Melbourne":
       setPlayerCards(
-        players.filter((player) => player.position === "midfielder")
+        players.filter((player) => player.location === "Melbourne")
       );
       break;
-    case "defender":
+    case "Brisbane":
       setPlayerCards(
-        players.filter((player) => player.position === "defender")
+        players.filter((player) => player.location === "Brisbane")
       );
       break;
-    case "goalkeeper":
+    case "Perth":
       setPlayerCards(
-        players.filter((player) => player.position === "goalkeeper")
+        players.filter((player) => player.location === "Perth")
       );
       break;
     default: 

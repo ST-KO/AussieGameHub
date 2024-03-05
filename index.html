@@ -5,106 +5,132 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Learn Modern JavaScript methods by building football team cards
+      Australian Game Studios
     </title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1 class="title">Team stats</h1>
+    <h1 class="title">Australian Game Studios</h1>
     <main>
       <div class="team-stats">
-        <p>Team: <span id="team"></span></p>
-        <p>Sport: <span id="sport"></span></p>
-        <p>Year: <span id="year"></span></p>
-        <p>Head coach: <span id="head-coach"></span></p>
+        <p>Country: <span id="team"></span></p>
+        <p>Genre: <span id="sport"></span></p>
+        <p>Tech: <span id="year"></span></p>
+        <!-- <p>Head coach: <span id="head-coach"></span></p> -->
       </div>
-      <label class="options-label" for="players">Filter Teammates:</label>
+      <label class="options-label" for="players">Filter Location:</label>
       <select name="players" id="players">
-        <option value="all">All Players</option>
-        <option value="nickname">Nicknames</option>
-        <option value="forward">Position Forward</option>
-        <option value="midfielder">Position Midfielder</option>
-        <option value="defender">Position Defender</option>
-        <option value="goalkeeper">Position Goalkeeper</option>
+        <option value="all">All Locations</option>
+        <option value="nickname">Remote</option>
+        <option value="forward">Sydney</option>
+        <option value="midfielder">Melbourne</option>
+        <option value="defender">Brisbane</option>
+        <option value="goalkeeper">Perth</option>
       </select>
       <div class="cards" id="player-cards">
         <div class="player-card">
-          <h2>Sergio Almirón</h2>
-          <p>Position: forward</p>
-          <p>Number: 1</p>
-          <p>Nickname: N/A</p>
+          <h2>Chaos Theory</h2>
+          <p><span>Location</span>: Sydney</p>
+          <p><span>Game Engine</span>: Unity</p>
+          <p><span>Language</span>: C#</p>
+          <p><span>Remote</span>: Hybrid</p>
+          <p><span><a href="https://www.chaostheorygames.com/" target="_blank">Website Link</a></p>
         </div>
         <div class="player-card">
-          <h2>Sergio Batista</h2>
-          <p>Position: midfielder</p>
-          <p>Number: 2</p>
-          <p>Nickname: N/A</p>
+          <h2>Riot Games Sydney</h2>
+          <p><span>Location</span>: Sydney</p>
+          <p><span>Game Engine</span>: Unreal</p>
+          <p><span>Language</span>: C++</p>
+          <p><span>Remote</span>: N/A</p>
+          <p><span><a href="https://www.riotgames.com/en" target="_blank">Website Link</a></p>
         </div>
         <div class="player-card">
-          <h2>Ricardo Bochini</h2>
-          <p>Position: midfielder</p>
-          <p>Number: 3</p>
-          <p>Nickname: El Bocha</p>
+          <h2>Mode Games</h2>
+          <p><span>Location</span>: Sydney</p>
+          <p><span>Game Engine</span>: Unity</p>
+          <p><span>Language</span>: C#</p>
+          <p><span>Remote</span>: N/A</p>
+          <p><span><a href="https://www.mode-games.com/" target="_blank">Website Link</a></p>
         </div>
         <div class="player-card">
-          <h2>Claudio Borghi</h2>
-          <p>Position: midfielder</p>
-          <p>Number: 4</p>
-          <p>Nickname: Bichi</p>
+          <h2>Blowfish Studios</h2>
+          <p><span>Location</span>: Sydney</p>
+          <p><span>Game Engine</span>: Unity, Unreal, Phaser</p>
+          <p><span>Language</span>: C#, C++, JavaScript</p>
+          <p><span>Remote</span>: Hybrid</p>
+          <p><span><a href="https://www.blowfishstudios.com/" target="_blank">Website Link</a></p>
         </div>
         <div class="player-card">
-          <h2>José Luis Brown</h2>
-          <p>Position: defender</p>
-          <p>Number: 5</p>
-          <p>Nickname: Tata</p>
+          <h2>Noble Steed Games</h2>
+          <p><span>Location</span>: Sydney</p>
+          <p><span>Game Engine</span>: Unity</p>
+          <p><span>Language</span>: C#</p>
+          <p><span>Remote</span>: Flexible</p>
+          <p><span><a href="https://noblesteedgames.com/" target="_blank">Website Link</a></p>
         </div>
         <div class="player-card">
-          <h2>Daniel Passarella</h2>
-          <p>Position: defender</p>
-          <p>Number: 6</p>
-          <p>Nickname: El Gran Capitán</p>
+          <h2>SMG Studio</h2>
+          <p><span>Location</span>: Sydney</p>
+          <p><span>Game Engine</span>: Unity</p>
+          <p><span>Language</span>: C#</p>
+          <p><span>Remote</span>: Flexible</p>
+          <p><span><a href="https://www.smgstudio.com/" target="_blank">Website Link</a></p>
         </div>
         <div class="player-card">
-          <h2>Jorge Burruchaga</h2>
-          <p>Position: forward</p>
-          <p>Number: 7</p>
-          <p>Nickname: Burru</p>
+          <h2>Not Doppler</h2>
+          <p><span>Location</span>: Sydney</p>
+          <p><span>Game Engine</span>: Unity</p>
+          <p><span>Language</span>: C#</p>
+          <p><span>Remote</span>: Hybrid</p>
+          <p><span><a href="https://www.notdoppler.com/" target="_blank">Website Link</a></p>
         </div>
         <div class="player-card">
-          <h2>Néstor Clausen</h2>
-          <p>Position: defender</p>
-          <p>Number: 8</p>
-          <p>Nickname: N/A</p>
+          <h2>UBISOFT</h2>
+          <p><span>Location</span>: Sydney</p>
+          <p><span>Game Engine</span>: Cutsom Engine</p>
+          <p><span>Language</span>: C++</p>
+          <p><span>Remote</span>: Hybrid</p>
+          <p><span><a href="https://www.ubisoft.com/en-us/" target="_blank">Website Link</a></p>
         </div>
         <div class="player-card">
-          <h2>José Luis Cuciuffo</h2>
-          <p>Position: defender</p>
-          <p>Number: 9</p>
-          <p>Nickname: El Cuchu</p>
+          <h2>3RD SENSE</h2>
+          <p><span>Location</span>: Sydney</p>
+          <p><span>Game Engine</span>: Unity</p>
+          <p><span>Language</span>: C#</p>
+          <p><span>Remote</span>: N/A</p>
+          <p><span><a href="https://3rdsense.com/" target="_blank">Website Link</a></p>
         </div>
         <div class="player-card">
-          <h2>(Captain) Diego Maradona</h2>
-          <p>Position: midfielder</p>
-          <p>Number: 10</p>
-          <p>Nickname: El Pibe de Oro</p>
+          <h2>High Limit Studio</h2>
+          <p><span>Location</span>: Sydney</p>
+          <p><span>Game Engine</span>: Maybe Unity & Phaser</p>
+          <p><span>Language</span>: C#, JavaScript</p>
+          <p><span>Remote</span>: N/A</p>
+          <p><span><a href="https://highlimitstudio.com/" target="_blank">Website Link</a></p>
         </div>
         <div class="player-card">
-          <h2>Jorge Valdano</h2>
-          <p>Position: forward</p>
-          <p>Number: 11</p>
-          <p>Nickname: The Philosopher of Football</p>
+          <h2>PlaySide Studios</h2>
+          <p><span>Location</span>: Melbourne</p>
+          <p><span>Game Engine</span>: Maybe Cutsom Engine</p>
+          <p><span>Language</span>: C++</p>
+          <p><span>Remote</span>: N/A</p>
+          <p><span><a href="https://www.playsidestudios.com/" target="_blank">Website Link</a></p>
         </div>
         <div class="player-card">
-          <h2>Héctor Enrique</h2>
-          <p>Position: midfielder</p>
-          <p>Number: 12</p>
-          <p>Nickname: N/A</p>
+          <h2>Mighty Games Group</h2>
+          <p><span>Location</span>: Melbourne</p>
+          <p><span>Game Engine</span>: Unity, Unreal</p>
+          <p><span>Language</span>: C#, C++</p>
+          <p><span>Remote</span>: N/A</p>
+          <p><span><a href="https://www.mightygamesgroup.com/" target="_blank">Website Link</a></p>
         </div>
         <div class="player-card">
-          <h2>Oscar Garré</h2>
-          <p>Position: defender</p>
-          <p>Number: 13</p>
-          <p>Nickname: N/A</p>
+          <h2>Firemonkey Studios</h2>
+          <p><span>Location</span>: Melbourne</p>
+          <p><span>Game Engine</span>: Maybe Custom Engine</p>
+          <p><span>Language</span>: C++</p>
+          <p><span>Remote</span>: N/A</p>
+          <p><span><a href="https://www.ea.com/ea-studios/firemonkeys" target="_blank">Website Link</a></p>
         </div>
         <div class="player-card">
           <h2>Ricardo Giusti</h2>
@@ -162,7 +188,7 @@
         </div>
       </div>
     </main>
-    <footer>&copy; freeCodeCamp</footer>
+    <footer>Made By STK</footer>
     <script src="./script.js"></script>
   </body>
 </html>

@@ -14,7 +14,8 @@
 }
 
 body {
-  background-color: var(--dark-grey);
+  /* background-color: var(--dark-grey); */
+  background-color: #111;
   text-align: center;
   padding: 10px;
 }
@@ -51,10 +52,25 @@ footer {
 
 .player-card {
   background-color: var(--light-grey);
+  line-height: 2rem;
   padding: 1.3rem;
   margin: 1.2rem;
   width: 300px;
   border-radius: 15px;
+}
+
+.player-card h2{
+    margin-bottom: 1rem;
+}
+
+.player-card span{
+    font-weight: 1000;
+}
+
+.player-card a{
+    
+    color:#0a0a23;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
