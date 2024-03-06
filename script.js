@@ -1,18 +1,19 @@
 const teamName = document.getElementById("team");
 const typeOfSport = document.getElementById("sport");
 const worldCupYear = document.getElementById("year");
-const headCoach = document.getElementById("head-coach");
+// const headCoach = document.getElementById("head-coach");
 const playerCards = document.getElementById("player-cards");
 const playersDropdownList = document.getElementById("players");
+
 const myFavoriteFootballTeam = {
   team: "Australia",
   sport: "Game Development",
   year: 1986,
   isWorldCupWinner: true,
-  headCoach: {
-    coachName: "Carlos Bilardo",
-    matches: 7,
-  },
+//   headCoach: {
+//     coachName: "Carlos Bilardo",
+//     matches: 7,
+//   },
   players: [
     {
       name: "Chaos Theory",
@@ -27,7 +28,7 @@ const myFavoriteFootballTeam = {
       name: "Riot Games Sydney",
       location: "Sydney",
       gameengine: "Unreal",
-      languange: "C++",
+      language: "C++",
       isRemote: false,
       remote: null,
       website: "https://www.chaostheorygames.com/"
@@ -36,7 +37,7 @@ const myFavoriteFootballTeam = {
       name: "Mode Games",
       location: "Sydney",
       gameengine: "Unity",
-      languange: "C#",
+      language: "C#",
       isRemote: false,
       remote: null,
       website: "https://www.mode-games.com/"
@@ -45,7 +46,7 @@ const myFavoriteFootballTeam = {
       name: "Blowfish Studios",
       location: "Sydney",
       gameengine: "Unity, Unreal, Phaser",
-      languange: "C#, C++, JavaScript",
+      language: "C#, C++, JavaScript",
       isRemote: true,
       remote: "Hybrid",
       website: "https://www.blowfishstudios.com/"
@@ -54,7 +55,7 @@ const myFavoriteFootballTeam = {
       name: "Noble Steed Games",
       location: "Sydney",
       gameengine: "Unity",
-      languange: "C#",
+      language: "C#",
       isRemote: true,
       remote: "Flexible",
       website: "https://noblesteedgames.com/"
@@ -63,7 +64,7 @@ const myFavoriteFootballTeam = {
       name: "SMG Studio",
       location: "Sydney",
       gameengine: "Unity",
-      languange: "C#",
+      language: "C#",
       isRemote: true,
       remote: "Flexible",
       website: "https://www.smgstudio.com/"
@@ -72,7 +73,7 @@ const myFavoriteFootballTeam = {
       name: "Not Doppler",
       location: "Sydney",
       gameengine: "Unity",
-      languange: "C#",
+      language: "C#",
       isRemote: true,
       remote: "Hybrid",
       website: "https://www.notdoppler.com/"
@@ -81,7 +82,7 @@ const myFavoriteFootballTeam = {
       name: "UBISOFT",
       location: "Sydney",
       gameengine: "Custom Engine",
-      languange: "C++",
+      language: "C++",
       isRemote: true,
       remote: "Hybrid",
       website: "https://www.ubisoft.com/en-us/"
@@ -90,7 +91,7 @@ const myFavoriteFootballTeam = {
       name: "3RD SENSE",
       location: "Sydney",
       gameengine: "Unity",
-      languange: "C#",
+      language: "C#",
       isRemote: false,
       remote: null,
       website: "https://3rdsense.com/"
@@ -99,152 +100,186 @@ const myFavoriteFootballTeam = {
       name: "High Limit Studio",
       location: "Sydney",
       gameengine: "Maybe Unity & Phaser",
-      languange: "C#, JavaScript",
+      language: "C#, JavaScript",
       isRemote: false,
       remote: null,
       website: "https://highlimitstudio.com/"
     },
     {
-      name: "Jorge Valdano",
-      position: "forward",
-      number: 11,
-      isCaptain: false,
-      nickname: "The Philosopher of Football",
+      name: "PlaySide Studios",
+      location: "Melbourne",
+      gameengine: "Maybe Custom Engine",
+      language: "C++",
+      isRemote: false,
+      remote: null,
+      website: "https://www.playsidestudios.com/"
     },
     {
-      name: "Héctor Enrique",
-      position: "midfielder",
-      number: 12,
-      isCaptain: false,
-      nickname: null,
+      name: "Mighty Games Group",
+      location: "Melbourne",
+      gameengine: "Unity, Unreal",
+      language: "C#, C++",
+      isRemote: false,
+      remote: null,
+      website: "https://www.mightygamesgroup.com/"
     },
     {
-      name: "Oscar Garré",
-      position: "defender",
-      number: 13,
-      isCaptain: false,
-      nickname: null,
+      name: "Firemonkeys Studios",
+      location: "Melbourne",
+      gameengine: "Maybe Custom Engine",
+      language: "C++",
+      isRemote: false,
+      remote: null,
+      website: "https://www.ea.com/ea-studios/firemonkeys"
     },
     {
-      name: "Ricardo Giusti",
-      position: "midfielder",
-      number: 14,
-      isCaptain: false,
-      nickname: null,
+      name: "Playcorp Studios",
+      location: "Melbourne",
+      gameengine: "Maybe Unity",
+      language: "Maybe C#",
+      isRemote: false,
+      remote: null,
+      website: "https://www.playcorp.com/"
     },
     {
-      name: "Luis Islas",
-      position: "goalkeeper",
-      number: 15,
-      isCaptain: false,
-      nickname: "El loco",
+      name: "fmod",
+      location: "Melbourne",
+      gameengine: "Unity",
+      language: "C#",
+      isRemote: false,
+      remote: null,
+      website: "https://www.fmod.com/"
     },
     {
-      name: "Julio Olarticoechea",
-      position: "defender",
-      number: 16,
-      isCaptain: false,
-      nickname: null,
+      name: "Millipede",
+      location: "Melbourne",
+      gameengine: "Unity",
+      language: "C#",
+      isRemote: false,
+      remote: null,
+      website: "https://millipede.com.au/index.html"
     },
     {
-      name: "Pedro Pasculli",
-      position: "forward",
-      number: 17,
-      isCaptain: false,
-      nickname: null,
+      name: "Art Of Play",
+      location: "Melbourne",
+      gameengine: "Unity, Phaser",
+      language: "C#, JavaScript",
+      isRemote: true,
+      remote: "Full Remote (Australia)",
+      website: "https://www.artofplaygames.com/index.html"
     },
     {
-      name: "Nery Pumpido",
-      position: "goalkeeper",
-      number: 18,
-      isCaptain: false,
-      nickname: null,
+      name: "Ultimate Studio",
+      location: "Melbourne",
+      gameengine: "Unreal",
+      language: "C++",
+      isRemote: true,
+      remote: "Flexible Remote",
+      website: "https://ultimate.studio/"
     },
     {
-      name: "Oscar Ruggeri",
-      position: "defender",
-      number: 19,
-      isCaptain: false,
-      nickname: "El Cabezón",
+      name: "The Lode",
+      location: "Melbourne",
+      gameengine: "Maybe Unity",
+      language: "Maybe C#",
+      isRemote: false,
+      remote: null,
+      website: "https://thelode.com.au"
     },
     {
-      name: "Carlos Tapia",
-      position: "midfielder",
-      number: 20,
-      isCaptain: false,
-      nickname: null,
+      name: "Cyber Games Studio",
+      location: "Melbourne",
+      gameengine: "Maybe Unity",
+      language: "Maybe C#",
+      isRemote: false,
+      remote: null,
+      website: "https://cybergames.studio"
     },
     {
-      name: "Marcelo Trobbiani",
-      position: "midfielder",
-      number: 21,
-      isCaptain: false,
-      nickname: "Calesita",
+      name: "Opaque",
+      location: "Melbourne",
+      gameengine: "Unreal",
+      language: "C++",
+      isRemote: false,
+      remote: null,
+      website: "https://www.opaque.media"
     },
     {
-      name: "Héctor Zelada",
-      position: "goalkeeper",
-      number: 22,
-      isCaptain: false,
-      nickname: null,
+      name: "Halfbrick Studios",
+      location: "Brisbane",
+      gameengine: "Unity",
+      language: "C#",
+      isRemote: true,
+      remote: "Full Remote (Worldwide)",
+      website: "https://www.halfbrick.com"
     },
   ],
 };
 
 Object.freeze(myFavoriteFootballTeam);
 const { sport, team, year, players } = myFavoriteFootballTeam;
-const { coachName } = myFavoriteFootballTeam.headCoach;
+// const { coachName } = myFavoriteFootballTeam.headCoach;
 
 typeOfSport.textContent = sport;
 teamName.textContent = team;
 worldCupYear.textContent = year;
 // headCoach.textContent = coachName;
 
-const setPlayerCards = (arr = players) => {
-  playerCards.innerHTML += arr
+const setPlayerCards = (arr = players, selectedOption) => {
+   
+    playerCards.innerHTML += arr
     .map(
-      ({ name, position, number, isCaptain, nickname, location, gameengine,language,isRemote, remote, website }) =>
-        `
-        <div class="player-card">
-          <h2>${name} <br/>${isRemote ? "(Remote)" : ""}</h2>
-          <p>Location: ${location}</p>
-          <p>Game Engine: ${gameengine}</p>
-          <p>Language: ${language}</p>
-          <p>Remote: ${remote !== null ? remote : "N/A"}</p>
-          <p><a hreft="${website}"></a></p>
-        </div>
-      `
+      ({ name, location, gameengine,language, isRemote, remote, website }) => {
+       
+        const playerHeader = selectedOption === "All Locations" || selectedOption === "Remote" 
+        ? `<h2>${name}</h2>` 
+        : `<h2>${name} <br/>${isRemote ? "(Remote)" : "(No Remote)"}</h2>`
+       
+        return (
+            `
+            <div class="player-card">
+            ${playerHeader}
+            <p><span>Location</span>: ${location}</p>
+            <p><span>Game Engine</span>: ${gameengine}</p>
+            <p><span>Language</span>: ${language}</p>
+            <p><span>Remote</span>: ${remote !== null ? remote : "N/A"}</p>
+            <p><span><a href="${website}" target="_blank">Website Link</a></span></p>
+            </div>
+            `
+        )
+      }
+        
     )
     .join("");
 };
 
 playersDropdownList.addEventListener("change", (e) => {
   playerCards.innerHTML = "";
-
-  switch (e.target.value) {
+  const selectedOption = e.target.value;
+  switch (selectedOption) {
     case "Remote":
-      setPlayerCards(players.filter((player) => player.remote !== null));
+      setPlayerCards(players.filter((player) => player.remote !== null), selectedOption);
       break;
     case "Sydney":
-      setPlayerCards(players.filter((player) => player.location === "Sydney"));
+      setPlayerCards(players.filter((player) => player.location === "Sydney"), selectedOption);
       break;
     case "Melbourne":
       setPlayerCards(
-        players.filter((player) => player.location === "Melbourne")
+        players.filter((player) => player.location === "Melbourne"), selectedOption
       );
       break;
     case "Brisbane":
       setPlayerCards(
-        players.filter((player) => player.location === "Brisbane")
+        players.filter((player) => player.location === "Brisbane"), selectedOption
       );
       break;
     case "Perth":
       setPlayerCards(
-        players.filter((player) => player.location === "Perth")
+        players.filter((player) => player.location === "Perth"), selectedOption
       );
       break;
     default: 
-      setPlayerCards();
+        setPlayerCards(players, selectedOption);
       break;
     }
 });
