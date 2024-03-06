@@ -4,6 +4,7 @@ const typeOfSport = document.getElementById("sport");
 // const headCoach = document.getElementById("head-coach");
 const playerCards = document.getElementById("player-cards");
 const playersDropdownList = document.getElementById("players");
+const languagesDropdownList = document.getElementById("languages");
 
 const theGameStudios = {
   team: "Australia",
@@ -339,7 +340,8 @@ const setPlayerCards = (arr = players, selectedOption) => {
     .map(
       ({ name, location, gameengine,language, isRemote, remote, website }) => {
        
-        const playerHeader = selectedOption === "All Locations" || selectedOption === "Remote" 
+        const playerHeader = selectedOption === "All Locations" || selectedOption === "Remote"
+        || selectedOption === "All Languages" 
         ? `<h2>${name}</h2>` 
         : `<h2>${name} <br/>${isRemote ? "(Remote)" : "(No Remote)"}</h2>`
        
@@ -391,3 +393,27 @@ playersDropdownList.addEventListener("change", (e) => {
       break;
     }
 });
+
+languagesDropdownList.addEventListener("change", (e) => {
+    playerCards.innerHTML = "";
+    const selectedOption = e.target.value;
+    switch (selectedOption) {
+      case "C#":
+        setPlayerCards(players.filter((player) => player.language === "C#"), selectedOption);
+        break;
+      case "C++":
+        setPlayerCards(
+          players.filter((player) => player.language === "C++"), selectedOption
+        );
+        break;
+      case "JavaScript":
+        setPlayerCards(
+          players.filter((player) => player.language === "Javascript"), selectedOption
+        );
+        break;
+      default: 
+          setPlayerCards(players, selectedOption);
+        break;
+      }
+  });
+

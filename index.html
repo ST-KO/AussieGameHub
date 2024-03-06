@@ -18,17 +18,32 @@
         <!-- <p>Tech: <span id="year"></span></p> -->
         <!-- <p>Head coach: <span id="head-coach"></span></p> -->
       </div>
-
-      <label class="options-label" for="players">Filter Location:</label>
-
-      <select name="players" id="players">
-        <option value="All Locations">All Locations</option>
-        <option value="Remote">Remote</option>
-        <option value="Sydney">Sydney</option>
-        <option value="Melbourne">Melbourne</option>
-        <option value="Brisbane">Brisbane</option>
-        <option value="Perth">Perth</option>
-      </select>
+      
+      <div class="filter-div">
+        <div>
+            <label class="options-label" for="players">Filter Location:</label>
+            <select name="players" id="players">
+                <option value="All Locations">All Locations</option>
+                <option value="Remote">Remote</option>
+                <option value="Sydney">Sydney</option>
+                <option value="Melbourne">Melbourne</option>
+                <option value="Brisbane">Brisbane</option>
+                <option value="Perth">Perth</option>
+            </select>
+        </div>
+        
+        <div>
+            <label class="options-label" for="language">Filter Language:</label>
+            <select name="languages" id="languages">
+                <option value="All Languages">All Languages</option>
+                <option value="C#">C#</option>
+                <option value="C++">C++</option>
+                <option value="JavaScript">JavaScript</option>
+            </select>
+        </div>
+        
+      </div>
+      
 
       <div class="cards" id="player-cards">
         <div class="player-card">
