@@ -1,15 +1,15 @@
 const teamName = document.getElementById("team");
 const typeOfSport = document.getElementById("sport");
-const worldCupYear = document.getElementById("year");
+// const worldCupYear = document.getElementById("year");
 // const headCoach = document.getElementById("head-coach");
 const playerCards = document.getElementById("player-cards");
 const playersDropdownList = document.getElementById("players");
 
-const myFavoriteFootballTeam = {
+const theGameStudios = {
   team: "Australia",
   sport: "Game Development",
-  year: 1986,
-  isWorldCupWinner: true,
+//   year: 1986,
+//   isWorldCupWinner: true,
 //   headCoach: {
 //     coachName: "Carlos Bilardo",
 //     matches: 7,
@@ -104,6 +104,15 @@ const myFavoriteFootballTeam = {
       isRemote: false,
       remote: null,
       website: "https://highlimitstudio.com/"
+    },
+    {
+      name: "Hipster Whale",
+      location: "Melbourne",
+      gameengine: "Unity",
+      language: "C#",
+      isRemote: false,
+      remote: null,
+      website: "https://www.hipsterwhale.com/"
     },
     {
       name: "PlaySide Studios",
@@ -213,16 +222,115 @@ const myFavoriteFootballTeam = {
       remote: "Full Remote (Worldwide)",
       website: "https://www.halfbrick.com"
     },
+    {
+      name: "Spunge Games",
+      location: "Brisbane",
+      gameengine: "Maybe Unity",
+      language: "Maybe C#",
+      isRemote: false,
+      remote: null,
+      website: "https://spungegames.com"
+    },
+    {
+      name: "Reel Time Gaming",
+      location: "Brisbane",
+      gameengine: "Maybe Unity",
+      language: "Maybe C#",
+      isRemote: false,
+      remote: null,
+      website: "https://www.reeltimegaming.com"
+    },
+    {
+      name: "GAMELOFT",
+      location: "Brisbane",
+      gameengine: "Maybe Custom Engine",
+      language: "C++",
+      isRemote: true,
+      remote: "Hybrid",
+      website: "https://www.gameloft.com"
+    },
+    {
+      name: "Emerge Worlds",
+      location: "Brisbane",
+      gameengine: "Maybe Unity",
+      language: "Maybe C#",
+      isRemote: false,
+      remote: null,
+      website: "https://emergeworlds.com"
+    },
+    {
+      name: "5 Lives Studio",
+      location: "Brisbane",
+      gameengine: "Maybe Unity",
+      language: "Maybe C#",
+      isRemote: false,
+      remote: null,
+      website: "https://www.5livesstudios.com"
+    },
+    {
+      name: "Eyecon",
+      location: "Brisbane",
+      gameengine: "Maybe Unity",
+      language: "Maybe C#",
+      isRemote: false,
+      remote: null,
+      website: "https://eyecon.com"
+    },
+    {
+      name: "Lightmare Studios",
+      location: "Brisbane",
+      gameengine: "Unity, Unreal",
+      language: "C#, C++",
+      isRemote: false,
+      remote: null,
+      website: "https://www.lightmare.com.au"
+    },
+    {
+      name: "Unnatural Freaks Studio",
+      location: "Perth",
+      gameengine: "Maybe Unity",
+      language: "Maybe C#",
+      isRemote: false,
+      remote: null,
+      website: "https://unnaturalfreaksstudio.com"
+    },
+    {
+      name: "Big Bench Games",
+      location: "Perth",
+      gameengine: "Maybe Unity",
+      language: "Maybe C#",
+      isRemote: false,
+      remote: null,
+      website: "https://www.bigbench.games"
+    },
+    {
+      name: "Winterwire Games",
+      location: "Perth",
+      gameengine: "Maybe Unity",
+      language: "Maybe C#",
+      isRemote: false,
+      remote: null,
+      website: "https://winterwiregames.com"
+    },
+    {
+      name: "Hoodwinked Studios",
+      location: "Perth",
+      gameengine: "Maybe Unity",
+      language: "Maybe C#",
+      isRemote: false,
+      remote: null,
+      website: "https://playstarlost.com"
+    },
   ],
 };
 
-Object.freeze(myFavoriteFootballTeam);
-const { sport, team, year, players } = myFavoriteFootballTeam;
-// const { coachName } = myFavoriteFootballTeam.headCoach;
+Object.freeze(theGameStudios);
+const { sport, team, year, players } = theGameStudios;
+// const { coachName } = theGameStudios.headCoach;
 
 typeOfSport.textContent = sport;
 teamName.textContent = team;
-worldCupYear.textContent = year;
+// worldCupYear.textContent = year;
 // headCoach.textContent = coachName;
 
 const setPlayerCards = (arr = players, selectedOption) => {
