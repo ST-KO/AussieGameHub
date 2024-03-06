@@ -112,8 +112,8 @@ const theGameStudios = {
       location: "Melbourne",
       gameengine: "Maybe Custom Engine",
       language: "C++",
-      isRemote: false,
-      remote: null,
+      isRemote: true,
+      remote: "Possible",
       website: "https://www.playsidestudios.com/"
     },
     {
