@@ -5,24 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Australian Game Studios
+      Game Studios
     </title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1 class="title">Australian Game Studios</h1>
+    <h1 class="title">Game Studios</h1>
     <main>
       <div class="team-stats">
-        <p>Country: <span id="team"></span></p>
-        <p>Genre: <span id="sport"></span></p>
-        <!-- <p>Tech: <span id="year"></span></p> -->
-        <!-- <p>Head coach: <span id="head-coach"></span></p> -->
+        <p>Country: <span id="country"></span></p>
+        <p>Genre: <span id="genre"></span></p>
       </div>
       
       <div class="filter-div">
         <div>
-            <label class="options-label" for="players">Filter Location:</label>
-            <select name="players" id="players">
+            <label class="options-label" for="studios">Filter Location:</label>
+            <select name="studios" id="studios">
                 <option value="All Locations">All Locations</option>
                 <option value="Remote">Remote</option>
                 <option value="Sydney">Sydney</option>
@@ -44,9 +42,8 @@
         
       </div>
       
-
-      <div class="cards" id="player-cards">
-        <div class="player-card">
+      <div class="cards" id="studio-cards">
+        <div class="studio-card">
           <h2>Chaos Theory</h2>
           <p><span>Location</span>: Sydney</p>
           <p><span>Game Engine</span>: Unity</p>
@@ -54,7 +51,7 @@
           <p><span>Remote</span>: Hybrid</p>
           <p><span><a href="https://www.chaostheorygames.com/" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
           <h2>Riot Games Sydney</h2>
           <p><span>Location</span>: Sydney</p>
           <p><span>Game Engine</span>: Unreal</p>
@@ -62,7 +59,7 @@
           <p><span>Remote</span>: N/A</p>
           <p><span><a href="https://www.riotgames.com/en" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
           <h2>Mode Games</h2>
           <p><span>Location</span>: Sydney</p>
           <p><span>Game Engine</span>: Unity</p>
@@ -70,7 +67,7 @@
           <p><span>Remote</span>: N/A</p>
           <p><span><a href="https://www.mode-games.com/" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
           <h2>Blowfish Studios</h2>
           <p><span>Location</span>: Sydney</p>
           <p><span>Game Engine</span>: Unity, Unreal, Phaser</p>
@@ -78,7 +75,7 @@
           <p><span>Remote</span>: Hybrid</p>
           <p><span><a href="https://www.blowfishstudios.com/" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
           <h2>Noble Steed Games</h2>
           <p><span>Location</span>: Sydney</p>
           <p><span>Game Engine</span>: Unity</p>
@@ -86,7 +83,7 @@
           <p><span>Remote</span>: Flexible</p>
           <p><span><a href="https://noblesteedgames.com/" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
           <h2>SMG Studio</h2>
           <p><span>Location</span>: Sydney</p>
           <p><span>Game Engine</span>: Unity</p>
@@ -94,7 +91,7 @@
           <p><span>Remote</span>: Flexible</p>
           <p><span><a href="https://www.smgstudio.com/" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
           <h2>Not Doppler</h2>
           <p><span>Location</span>: Sydney</p>
           <p><span>Game Engine</span>: Unity</p>
@@ -102,7 +99,7 @@
           <p><span>Remote</span>: Hybrid</p>
           <p><span><a href="https://www.notdoppler.com/" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
           <h2>UBISOFT</h2>
           <p><span>Location</span>: Sydney</p>
           <p><span>Game Engine</span>: Cutsom Engine</p>
@@ -110,7 +107,7 @@
           <p><span>Remote</span>: Hybrid</p>
           <p><span><a href="https://www.ubisoft.com/en-us/" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
           <h2>3RD SENSE</h2>
           <p><span>Location</span>: Sydney</p>
           <p><span>Game Engine</span>: Unity</p>
@@ -118,7 +115,7 @@
           <p><span>Remote</span>: N/A</p>
           <p><span><a href="https://3rdsense.com/" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
           <h2>High Limit Studio</h2>
           <p><span>Location</span>: Sydney</p>
           <p><span>Game Engine</span>: Maybe Unity & Phaser</p>
@@ -126,7 +123,7 @@
           <p><span>Remote</span>: N/A</p>
           <p><span><a href="https://highlimitstudio.com/" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
             <h2>Hipster Whale</h2>
             <p><span>Location</span>: Melbourne</p>
             <p><span>Game Engine</span>: Unity</p>
@@ -134,7 +131,7 @@
             <p><span>Remote</span>: N/A</p>
             <p><span><a href="https://www.hipsterwhale.com/" target="_blank">Website Link</a></p>
           </div>
-        <div class="player-card">
+        <div class="studio-card">
           <h2>PlaySide Studios</h2>
           <p><span>Location</span>: Melbourne</p>
           <p><span>Game Engine</span>: Maybe Cutsom Engine</p>
@@ -142,7 +139,7 @@
           <p><span>Remote</span>: N/A</p>
           <p><span><a href="https://www.playsidestudios.com/" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
           <h2>Mighty Games Group</h2>
           <p><span>Location</span>: Melbourne</p>
           <p><span>Game Engine</span>: Unity, Unreal</p>
@@ -150,7 +147,7 @@
           <p><span>Remote</span>: N/A</p>
           <p><span><a href="https://www.mightygamesgroup.com/" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
           <h2>Firemonkey Studios</h2>
           <p><span>Location</span>: Melbourne</p>
           <p><span>Game Engine</span>: Maybe Custom Engine</p>
@@ -158,7 +155,7 @@
           <p><span>Remote</span>: N/A</p>
           <p><span><a href="https://www.ea.com/ea-studios/firemonkeys" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
           <h2>Playcorp Studios</h2>
           <p><span>Location</span>: Melbourne</p>
           <p><span>Game Engine</span>: Maybe Unity</p>
@@ -166,7 +163,7 @@
           <p><span>Remote</span>: N/A</p>
           <p><span><a href="https://www.playcorp.com/" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
           <h2>fmod</h2>
           <p><span>Location</span>: Melbourne</p>
           <p><span>Game Engine</span>: Unity</p>
@@ -174,7 +171,7 @@
           <p><span>Remote</span>: N/A</p>
           <p><span><a href="https://www.fmod.com/" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
           <h2>Millipede</h2>
           <p><span>Location</span>: Melbourne</p>
           <p><span>Game Engine</span>: Unity</p>
@@ -182,7 +179,7 @@
           <p><span>Remote</span>: N/A</p>
           <p><span><a href="https://millipede.com.au/index.html" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
           <h2>Art Of Play</h2>
           <p><span>Location</span>: Melbourne</p>
           <p><span>Game Engine</span>: Unity, Phaser</p>
@@ -190,7 +187,7 @@
           <p><span>Remote</span>: Full Remote (Australia)</p>
           <p><span><a href="https://www.artofplaygames.com/index.html" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
           <h2>Ultimate Studio</h2>
           <p><span>Location</span>: Melbourne</p>
           <p><span>Game Engine</span>: Unreal</p>
@@ -198,7 +195,7 @@
           <p><span>Remote</span>: Flexible Remote</p>
           <p><span><a href="https://ultimate.studio/" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
           <h2>The Lode</h2>
           <p><span>Location</span>: Melbourne</p>
           <p><span>Game Engine</span>: Maybe Unity</p>
@@ -206,7 +203,7 @@
           <p><span>Remote</span>: N/A</p>
           <p><span><a href="https://thelode.com.au/" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
           <h2>Cyber Games Studio</h2>
           <p><span>Location</span>: Melbourne</p>
           <p><span>Game Engine</span>: Maybe Unity</p>
@@ -214,7 +211,7 @@
           <p><span>Remote</span>: N/A</p>
           <p><span><a href="https://cybergames.studio/" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
           <h2>Opaque</h2>
           <p><span>Location</span>: Melbourne</p>
           <p><span>Game Engine</span>: Unreal</p>
@@ -222,7 +219,7 @@
           <p><span>Remote</span>: N/A</p>
           <p><span><a href="https://www.opaque.media/" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
           <h2>Halfbrick Studios</h2>
           <p><span>Location</span>: Brisbane</p>
           <p><span>Game Engine</span>: Unity</p>
@@ -230,7 +227,7 @@
           <p><span>Remote</span>: Full Remote (Worldwide)</p>
           <p><span><a href="https://www.halfbrick.com/" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
             <h2>Spunge Games</h2>
             <p><span>Location</span>: Brisbane</p>
             <p><span>Game Engine</span>: Maybe Unity</p>
@@ -238,7 +235,7 @@
             <p><span>Remote</span>: N/A</p>
             <p><span><a href="https://spungegames.com/" target="_blank">Website Link</a></p>
         </div>
-        <div class="player-card">
+        <div class="studio-card">
             <h2>Reel Time Gaming</h2>
             <p><span>Location</span>: Brisbane</p>
             <p><span>Game Engine</span>: Maybe Unity</p>
@@ -246,7 +243,7 @@
             <p><span>Remote</span>: N/A</p>
             <p><span><a href="https://www.reeltimegaming.com/" target="_blank">Website Link</a></p>
           </div>
-          <div class="player-card">
+          <div class="studio-card">
             <h2>GAMELOFT</h2>
             <p><span>Location</span>: Brisbane</p>
             <p><span>Game Engine</span>: Maybe Custom Engine</p>
@@ -254,7 +251,7 @@
             <p><span>Remote</span>: Hybrid</p>
             <p><span><a href="https://www.gameloft.com/" target="_blank">Website Link</a></p>
           </div>
-          <div class="player-card">
+          <div class="studio-card">
             <h2>Emerge Worlds</h2>
             <p><span>Location</span>: Brisbane</p>
             <p><span>Game Engine</span>: Maybe Unity</p>
@@ -262,7 +259,7 @@
             <p><span>Remote</span>: N/A</p>
             <p><span><a href="https://emergeworlds.com/" target="_blank">Website Link</a></p>
           </div>
-          <div class="player-card">
+          <div class="studio-card">
             <h2>5 Lives Studios</h2>
             <p><span>Location</span>: Brisbane</p>
             <p><span>Game Engine</span>: Maybe Unity</p>
@@ -270,7 +267,7 @@
             <p><span>Remote</span>: N/A</p>
             <p><span><a href="https://www.5livesstudios.com/" target="_blank">Website Link</a></p>
           </div>
-          <div class="player-card">
+          <div class="studio-card">
             <h2>Eyecon</h2>
             <p><span>Location</span>: Brisbane</p>
             <p><span>Game Engine</span>: Maybe Unity</p>
@@ -278,7 +275,7 @@
             <p><span>Remote</span>: N/A</p>
             <p><span><a href="https://eyecon.com/" target="_blank">Website Link</a></p>
           </div>
-          <div class="player-card">
+          <div class="studio-card">
             <h2>Lightmare Studios</h2>
             <p><span>Location</span>: Brisbane</p>
             <p><span>Game Engine</span>: Unity, Unreal</p>
@@ -286,7 +283,7 @@
             <p><span>Remote</span>: N/A</p>
             <p><span><a href="https://www.lightmare.com.au/" target="_blank">Website Link</a></p>
           </div>
-          <div class="player-card">
+          <div class="studio-card">
             <h2>Unnatural Freaks Studio</h2>
             <p><span>Location</span>: Perth</p>
             <p><span>Game Engine</span>: Maybe Unity</p>
@@ -294,7 +291,7 @@
             <p><span>Remote</span>: N/A</p>
             <p><span><a href="https://unnaturalfreaksstudio.com/" target="_blank">Website Link</a></p>
           </div>
-          <div class="player-card">
+          <div class="studio-card">
             <h2>Big Bench Games</h2>
             <p><span>Location</span>: Perth</p>
             <p><span>Game Engine</span>: Maybe Unity</p>
@@ -302,7 +299,7 @@
             <p><span>Remote</span>: N/A</p>
             <p><span><a href="https://www.bigbench.games/" target="_blank">Website Link</a></p>
           </div>
-          <div class="player-card">
+          <div class="studio-card">
             <h2>Winterwire Games</h2>
             <p><span>Location</span>: Perth</p>
             <p><span>Game Engine</span>: Maybe Unity</p>
@@ -310,7 +307,7 @@
             <p><span>Remote</span>: N/A</p>
             <p><span><a href="https://winterwiregames.com/" target="_blank">Website Link</a></p>
           </div>
-          <div class="player-card">
+          <div class="studio-card">
             <h2>Hoodwinked Studios</h2>
             <p><span>Location</span>: Perth</p>
             <p><span>Game Engine</span>: Maybe Unity</p>

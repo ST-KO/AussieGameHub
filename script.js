@@ -1,7 +1,7 @@
-const teamName = document.getElementById("team");
-const typeOfSport = document.getElementById("sport");
-const playerCards = document.getElementById("player-cards");
-const playersDropdownList = document.getElementById("players");
+const countryName = document.getElementById("country");
+const typeOfDevelopment = document.getElementById("genre");
+const studioCards = document.getElementById("studio-cards");
+const studiosDropdownList = document.getElementById("studios");
 const languagesDropdownList = document.getElementById("languages");
 
 const theGameStudios = {
@@ -320,12 +320,14 @@ const theGameStudios = {
 Object.freeze(theGameStudios);
 const { genre, country, players } = theGameStudios;
 
-typeOfSport.textContent = genre;
-teamName.textContent = country;
+typeOfDevelopment.textContent = genre;
+countryName.textContent = country;
 
-const setPlayerCards = (arr = players, selectedOption) => {
+
+// Displaying filtered results
+const setStudioCards = (arr = players, selectedOption) => {
    
-    playerCards.innerHTML += arr
+    studioCards.innerHTML += arr
     .map(
       ({ name, location, gameengine,language, isRemote, remote, website }) => {
        
@@ -336,7 +338,7 @@ const setPlayerCards = (arr = players, selectedOption) => {
        
         return (
             `
-            <div class="player-card">
+            <div class="studio-card">
             ${playerHeader}
             <p><span>Location</span>: ${location}</p>
             <p><span>Game Engine</span>: ${gameengine}</p>
@@ -352,40 +354,41 @@ const setPlayerCards = (arr = players, selectedOption) => {
     .join("");
 };
 
-playersDropdownList.addEventListener("change", (e) => {
-  playerCards.innerHTML = "";
+// Filtering according to location
+studiosDropdownList.addEventListener("change", (e) => {
+  studioCards.innerHTML = "";
   const selectedOption = e.target.value;
   switch (selectedOption) {
     case "Remote":
-      setPlayerCards(players.filter((player) => player.remote !== null), selectedOption);
+      setStudioCards(players.filter((player) => player.remote !== null), selectedOption);
       break;
     case "Sydney":
-      setPlayerCards(players.filter((player) => player.location === "Sydney"), selectedOption);
+      setStudioCards(players.filter((player) => player.location === "Sydney"), selectedOption);
       break;
     case "Melbourne":
-      setPlayerCards(
+      setStudioCards(
         players.filter((player) => player.location === "Melbourne"), selectedOption
       );
       break;
     case "Brisbane":
-      setPlayerCards(
+      setStudioCards(
         players.filter((player) => player.location === "Brisbane"), selectedOption
       );
       break;
     case "Perth":
-      setPlayerCards(
+      setStudioCards(
         players.filter((player) => player.location === "Perth"), selectedOption
       );
       break;
     default: 
-        setPlayerCards(players, selectedOption);
+        setStudioCards(players, selectedOption);
       break;
     }
 });
 
-
+// Filtering accroding to programming language
 languagesDropdownList.addEventListener("change", (e) => {
-    playerCards.innerHTML = "";
+    studioCards.innerHTML = "";
     const selectedOption = e.target.value;
   
     players.forEach(player => {
@@ -394,20 +397,20 @@ languagesDropdownList.addEventListener("change", (e) => {
 
     switch (selectedOption) {
       case "C#":
-         setPlayerCards(players.filter((player) => player.languagesArray.includes("C#")), selectedOption);
+         setStudioCards(players.filter((player) => player.languagesArray.includes("C#")), selectedOption);
          break;
       case "C++":
-        setPlayerCards(
+        setStudioCards(
           players.filter((player) => player.languagesArray.includes("C++")), selectedOption
         );
         break;
       case "JavaScript":
-        setPlayerCards(
+        setStudioCards(
           players.filter((player) => player.languagesArray.includes("JavaScript")), selectedOption
         );
         break;
       default: 
-          setPlayerCards(players, selectedOption);
+          setStudioCards(players, selectedOption);
         break;
       }
   });

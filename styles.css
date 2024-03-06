@@ -57,7 +57,7 @@ footer {
   align-items: center;
 }
 
-.player-card {
+.studio-card {
   background-color: var(--light-grey);
   line-height: 2rem;
   padding: 1.3rem;
@@ -66,18 +66,22 @@ footer {
   border-radius: 15px;
 }
 
-.player-card h2{
+.studio-card h2{
     margin-bottom: 1rem;
 }
 
-.player-card span{
+.studio-card span{
     font-weight: 1000;
 }
 
-.player-card a{
+.studio-card a{
     
     color:#0a0a23;
     cursor: pointer;
+}
+
+footer{
+    margin-top: 5rem;
 }
 
 @media (max-width: 768px) {
