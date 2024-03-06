@@ -1,20 +1,12 @@
 const teamName = document.getElementById("team");
 const typeOfSport = document.getElementById("sport");
-// const worldCupYear = document.getElementById("year");
-// const headCoach = document.getElementById("head-coach");
 const playerCards = document.getElementById("player-cards");
 const playersDropdownList = document.getElementById("players");
 const languagesDropdownList = document.getElementById("languages");
 
 const theGameStudios = {
-  team: "Australia",
-  sport: "Game Development",
-//   year: 1986,
-//   isWorldCupWinner: true,
-//   headCoach: {
-//     coachName: "Carlos Bilardo",
-//     matches: 7,
-//   },
+  country: "Australia",
+  genre: "Game Development",
   players: [
     {
       name: "Chaos Theory",
@@ -326,13 +318,10 @@ const theGameStudios = {
 };
 
 Object.freeze(theGameStudios);
-const { sport, team, year, players } = theGameStudios;
-// const { coachName } = theGameStudios.headCoach;
+const { genre, country, players } = theGameStudios;
 
-typeOfSport.textContent = sport;
-teamName.textContent = team;
-// worldCupYear.textContent = year;
-// headCoach.textContent = coachName;
+typeOfSport.textContent = genre;
+teamName.textContent = country;
 
 const setPlayerCards = (arr = players, selectedOption) => {
    
@@ -394,21 +383,27 @@ playersDropdownList.addEventListener("change", (e) => {
     }
 });
 
+
 languagesDropdownList.addEventListener("change", (e) => {
     playerCards.innerHTML = "";
     const selectedOption = e.target.value;
+  
+    players.forEach(player => {
+    player.languagesArray = player.language.split(/,|\s/);
+  });
+
     switch (selectedOption) {
       case "C#":
-        setPlayerCards(players.filter((player) => player.language === "C#"), selectedOption);
-        break;
+         setPlayerCards(players.filter((player) => player.languagesArray.includes("C#")), selectedOption);
+         break;
       case "C++":
         setPlayerCards(
-          players.filter((player) => player.language === "C++"), selectedOption
+          players.filter((player) => player.languagesArray.includes("C++")), selectedOption
         );
         break;
       case "JavaScript":
         setPlayerCards(
-          players.filter((player) => player.language === "Javascript"), selectedOption
+          players.filter((player) => player.languagesArray.includes("JavaScript")), selectedOption
         );
         break;
       default: 
